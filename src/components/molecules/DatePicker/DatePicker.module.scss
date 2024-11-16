@@ -1,0 +1,17 @@
+.datePicker {
+  position: relative;
+}
+
+
+
+.dateInput {
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  background: #2c2c2c;
+  color: #fff;
+  border: 1px solid #6c63ff;
+  padding: 0.5rem;
+  border-radius: 6px;
+  z-index: 100;
+}

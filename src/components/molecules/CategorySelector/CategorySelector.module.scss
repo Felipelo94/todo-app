@@ -1,0 +1,214 @@
+// CategorySelector.module.scss
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: #1a1a1a;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 28rem;
+
+    h2 {
+        color: white;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+}
+
+.categoriesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.categoryButton {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    span {
+        color: #1a1a1a;
+    }
+}
+
+.addCategoryButton {
+    composes: categoryButton;
+    background-color: #a5f3fc;
+
+    .plusIcon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: 0.25rem;
+        color: #1a1a1a;
+    }
+}
+
+// Categorías específicas
+.categoryGrocery {
+    composes: categoryButton;
+    background-color: #4ade80;
+}
+
+.categoryWork {
+    composes: categoryButton;
+    background-color: #fb923c;
+}
+
+.categorySport {
+    composes: categoryButton;
+    background-color: #a5f3fc;
+}
+
+.categoryDesign {
+    composes: categoryButton;
+    background-color: #67e8f9;
+}
+
+.categoryUniversity {
+    composes: categoryButton;
+    background-color: #60a5fa;
+}
+
+.categorySocial {
+    composes: categoryButton;
+    background-color: #f472b6;
+}
+
+.categoryMusic {
+    composes: categoryButton;
+    background-color: #c084fc;
+}
+
+.categoryHealth {
+    composes: categoryButton;
+    background-color: #fb7185;
+}
+
+.categoryMovie {
+    composes: categoryButton;
+    background-color: #38bdf8;
+}
+
+.categoryHome {
+    composes: categoryButton;
+    background-color: #fb923c;
+}
+
+.categoryDefault {
+    composes: categoryButton;
+    background-color: #9ca3af;
+}
+
+.mainButton {
+    width: 100%;
+    background-color: #4f46e5;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #4338ca;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+
+.newCategoryModal {
+    composes: modalOverlay;
+    z-index: 1001;
+
+    .modalContent {
+        max-width: 24rem;
+    }
+
+    h3 {
+        color: white;
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+}
+
+.input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #27272a;
+    border: 1px solid #3f3f46;
+    color: white;
+    margin-bottom: 1rem;
+
+    &:focus {
+        outline: none;
+        border-color: #4f46e5;
+    }
+
+    &::placeholder {
+        color: #6b7280;
+    }
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.createButton {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    background-color: #4f46e5;
+    color: white;
+
+    &:hover {
+        background-color: #4338ca;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.cancelButton {
+    composes: createButton;
+    background-color: #3f3f46;
+
+    &:hover {
+        background-color: #52525b;
+    }
+}
